@@ -16,7 +16,7 @@ export function createGeometryOl(
 ): ISimpleGeometry | undefined {
     let geomType;
     if (headerGeomType === GeometryType.Unknown) {
-        geomType = geometry?.type();
+        geomType = geometry ? geometry.type() : null;
     } else {
         geomType = headerGeomType;
     }
